@@ -61,6 +61,50 @@ void Chess::FENtoBoard(const std::string& fen) {
     // 3: castling availability (KQkq or -)
     // 4: en passant target square (in algebraic notation, or -)
     // 5: halfmove clock (number of halfmoves since the last capture or pawn advance)
+    _grid -> forEachSquare([](ChessSquare* square, int x, int y) {
+        square -> setBit(nullptr);
+    });
+
+    int row = 7;
+    int col = 0;
+
+    for (char ch : fen) {
+        if (ch == '/') {
+            row--;
+            col = 0;
+        } else if (isdigit(ch)) {
+            col += ch - '0';
+        } else {
+            ChessPiece piece = Pawn;
+            switch (toupper(ch)) {
+                case 'P':
+                    piece = Pawn;
+                    break;
+                case 'N':
+                    piece = Knight;
+                    break;
+                case 'B':
+                    piece = Bishop;
+                    break;
+                case 'R':
+                    piece = Rook;
+                    break;
+                case 'Q':
+                    piece = Queen;
+                    break;
+                case 'K':
+                    piece = King;
+                    break;
+            }
+            Bit* bit = PieceForPlayer(isupper(ch) ? 0 : 1, piece);
+            ChessSquare *square = _grid -> getSquare(col, row);
+            bit -> setPosition(square -> getPosition());
+            bit -> setParent(square);
+            bit -> setGameTag(isupper(ch) ? piece : piece + 128);
+            square -> setBit(bit);
+            col++;
+        }
+    }
 }
 
 bool Chess::actionForEmptyHolder(BitHolder &holder)
