@@ -1,0 +1,9 @@
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/Experimental.dir
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/Nightly.dir
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/Continuous.dir
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/demo.dir
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/PACKAGE.dir
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/alien/Desktop/Github/CMPM 123 Projects/chess-base/build/CMakeFiles/ZERO_CHECK.dir
